@@ -1,0 +1,144 @@
+$primary-color:#c1db9b;
+$background-color:#d2e6b5;
+$sec-color:#a0c172;
+$light-color:#f3f3f3;
+$dark-color:#333;
+$font-stack:'Josefin Sans', sans-serif;
+@import 'functions';
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $font-stack;
+    background-color: $background-color;
+    color:$dark-color;
+}
+
+.header{
+    padding: 2rem;
+    // background-color: $primary-color;
+    h1{
+        font-size: 3rem;
+        color: $dark-color;
+        text-align: center;
+    }
+}
+
+.recipes-container{
+    // background-color: $primary-color;
+    // display: grid;
+    grid-template-columns: repeat(3,1fr);
+    // grid-gap: 1rem;
+    // justify-content: center;
+    // align-items: center;
+    // margin:0 5rem ;
+    // padding: 4rem;
+    // border-radius: .5rem;
+    @include cont;
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        //  padding:1rem 0;
+
+        img{
+            width: 25rem;
+            border-radius: .5rem;
+            
+            &:hover{
+                background: $light-color;
+                opacity: 0.8;
+                cursor: pointer;
+                width: 27rem;
+            }
+        }
+        .img-{
+            width: 23rem;
+            
+            &:hover{
+                width: 25rem;
+            }
+        }
+        h1{
+             margin-top: .5rem;
+        }
+    }
+}
+.btn{
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: $background-color;
+    color: $dark-color;
+    text-decoration: none;
+    border-radius: .5rem;
+
+    &:hover{
+        background-color: $sec-color;
+        color: $light-color;
+    }
+}
+ .recipe{
+    @include cont;
+     grid-template-columns: 2fr 5fr;
+    //  grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+     "img p p"
+     "img ingredients ingredients"
+     "img ingredients ingredients"
+     "img Directions Directions"
+     "img Directions Directions"
+    ;
+    // grid-gap: 1rem;
+    p{
+        grid-area:p;  
+        text-align: center;
+    }
+    img{
+       
+        width: 20rem;
+        border-radius: .5rem;
+        grid-area:img;
+         grid-column: 1/span 4;
+
+    }
+    .ingredients{
+        h1{
+            margin-bottom: 1rem;
+        }
+        ul{
+            li{
+                
+            }
+        }
+        grid-area: ingredients;
+    }
+    .Directions{
+        grid-area: Directions;
+    }
+}
+    // .up{
+    //     display: flex;
+    //     flex-direction: row-reverse;
+    //     // justify-content: center;
+    //     //  align-items: center;
+    //     // padding:  .5rem 0;
+    //     p{
+    //         line-height: 1.5;
+    //         // text-align: center;
+    //         // word-wrap: break-word;
+    //          padding: 0 2rem;
+    //         //  margin-top: -4rem;
+    //         // justify-content: center;
+    //         // align-items: center;
+    //     }
+    //     img{
+    //         width: 20rem;
+    //         border-radius: .5rem;
+    //     }
+    // }   }
+
