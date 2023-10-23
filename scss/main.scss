@@ -1,5 +1,5 @@
 $primary-color:#c1db9b;
-$background-color:#d2e6b5;
+$background-color:#d2e6b5; //:#d2e6b5;
 $sec-color:#a0c172;
 $light-color:#f3f3f3;
 $dark-color:#333;
@@ -12,7 +12,8 @@ $font-stack:'Josefin Sans', sans-serif;
 
 body{
     font-family: $font-stack;
-    background-color: $background-color;
+    // background-color: $light-color;
+    background-color: $light-color;
     color:$dark-color;
 }
 
@@ -112,7 +113,7 @@ body{
         }
         ul{
             li{
-                
+                align-items: start;
             }
         }
         grid-area: ingredients;
@@ -121,24 +122,66 @@ body{
         grid-area: Directions;
     }
 }
-    // .up{
-    //     display: flex;
-    //     flex-direction: row-reverse;
-    //     // justify-content: center;
-    //     //  align-items: center;
-    //     // padding:  .5rem 0;
-    //     p{
-    //         line-height: 1.5;
-    //         // text-align: center;
-    //         // word-wrap: break-word;
-    //          padding: 0 2rem;
-    //         //  margin-top: -4rem;
-    //         // justify-content: center;
-    //         // align-items: center;
-    //     }
-    //     img{
-    //         width: 20rem;
-    //         border-radius: .5rem;
-    //     }
-    // }   }
 
+.recipe-eggplant{
+    @include cont;
+    grid-template-columns: 2fr 5fr;
+   //  grid-template-rows: repeat(3,1fr);
+   grid-template-areas:
+    "img p p"
+    "img ingredients ingredients"
+    "img ingredients ingredients"
+    "img filling filling"
+    "img remaining-ingr remaining-ingr"
+    "img Directions Directions"
+    "img Directions Directions"
+   ;
+   // grid-gap: 1rem;
+   p{
+       grid-area:p;  
+       text-align: center;
+   }
+   img{
+      
+       width: 20rem;
+       border-radius: .5rem;
+       grid-area:img;
+        grid-column: 1/span 4;
+
+   }
+   .ingredients{
+       h1{
+           margin-bottom: 1rem;
+       }
+       ul{
+           li{
+            align-items: start;
+           }
+       }
+       grid-area: ingredients;
+   }
+   .Directions{
+       grid-area: Directions;
+   }
+   .filling{
+       grid-area: filling;
+   }
+   .remaining-ingr{
+       grid-area: remaining-ingr;
+   }
+}
+
+ul{
+    gap: 2rem;
+    li{
+        // line-height: 1.2;
+        padding-bottom: 10px;
+    }
+    p{
+        align-items: start;
+    }
+}
+
+p{
+    line-height: 2;
+}

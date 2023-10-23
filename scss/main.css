@@ -5,7 +5,7 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-color: #d2e6b5;
+  background-color: #f3f3f3;
   color: #333;
 }
 
@@ -97,6 +97,64 @@ body {
 .recipe .ingredients h1 {
   margin-bottom: 1rem;
 }
+.recipe .ingredients ul li {
+  align-items: start;
+}
 .recipe .Directions {
   grid-area: Directions;
+}
+
+.recipe-eggplant {
+  background-color: #c1db9b;
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5rem;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  grid-template-columns: 2fr 5fr;
+  grid-template-areas: "img p p" "img ingredients ingredients" "img ingredients ingredients" "img filling filling" "img remaining-ingr remaining-ingr" "img Directions Directions" "img Directions Directions";
+}
+.recipe-eggplant p {
+  grid-area: p;
+  text-align: center;
+}
+.recipe-eggplant img {
+  width: 20rem;
+  border-radius: 0.5rem;
+  grid-area: img;
+  grid-column: 1/span 4;
+}
+.recipe-eggplant .ingredients {
+  grid-area: ingredients;
+}
+.recipe-eggplant .ingredients h1 {
+  margin-bottom: 1rem;
+}
+.recipe-eggplant .ingredients ul li {
+  align-items: start;
+}
+.recipe-eggplant .Directions {
+  grid-area: Directions;
+}
+.recipe-eggplant .filling {
+  grid-area: filling;
+}
+.recipe-eggplant .remaining-ingr {
+  grid-area: remaining-ingr;
+}
+
+ul {
+  gap: 2rem;
+}
+ul li {
+  padding-bottom: 10px;
+}
+ul p {
+  align-items: start;
+}
+
+p {
+  line-height: 2;
 }/*# sourceMappingURL=main.css.map */
