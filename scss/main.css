@@ -157,4 +157,94 @@ ul p {
 
 p {
   line-height: 2;
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    background-color: #c1db9b;
+  }
+  .recipes-container {
+    grid-template-columns: 1fr;
+    background-color: #c1db9b;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+    padding: 4rem;
+    border-radius: 0.5rem;
+  }
+  .card img {
+    max-width: 17rem;
+    height: auto;
+  }
+  .recipe {
+    background-color: #c1db9b;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img " "p" "ingredients" "filling" "remaining-ingr" "Directions";
+  }
+  .recipe-eggplant {
+    background-color: #c1db9b;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img " "p" "ingredients" "filling" "remaining-ingr" "Directions";
+  }
+}
+@media screen and (max-width: 417px) {
+  body {
+    background-color: #c1db9b;
+  }
+  .card img {
+    max-width: 10rem;
+    height: auto;
+  }
+  .card h1 {
+    font-size: small;
+  }
+  .card .recipe {
+    background-color: #c1db9b;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img " "p" "ingredients" "filling" "remaining-ingr" "Directions";
+  }
+  .card .recipe-eggplant {
+    background-color: #c1db9b;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img " "p" "ingredients" "filling" "remaining-ingr" "Directions";
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 825px) {
+  .card img {
+    max-width: 15rem;
+    height: auto;
+  }
+  .card h1 {
+    font-size: small;
+  }
 }/*# sourceMappingURL=main.css.map */

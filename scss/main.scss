@@ -1,9 +1,4 @@
-$primary-color:#c1db9b;
-$background-color:#d2e6b5; //:#d2e6b5;
-$sec-color:#a0c172;
-$light-color:#f3f3f3;
-$dark-color:#333;
-$font-stack:'Josefin Sans', sans-serif;
+@import 'var';
 @import 'functions';
 *{
     margin: 0;
@@ -184,4 +179,102 @@ ul{
 
 p{
     line-height: 2;
+}
+// tablet
+@media screen and (max-width: $table-width) {
+ body{
+    background-color: $primary-color;
+}
+//  and (min-width:$tmin-width)
+    
+.recipes-container{  
+   grid-template-columns: 1fr;
+  @include cont;
+}
+.card{
+    img{
+        max-width: 17rem;
+        height: auto;
+    }
+}
+.recipe{
+    @include cont;
+     grid-template-columns: 1fr;
+     grid-template-areas:
+     "img "
+     "p"
+     "ingredients"
+     "filling"
+     "remaining-ingr"
+     "Directions"
+    ;
+    }
+    .recipe-eggplant{
+    @include cont;
+     grid-template-columns: 1fr;
+     grid-template-areas:
+     "img "
+     "p"
+     "ingredients"
+     "filling"
+     "remaining-ingr"
+     "Directions"
+    //  "img Directions Directions"
+    ;
+    }
+
+}
+@media screen and (max-width: $mobile-width) {
+    body{
+    background-color: $primary-color;
+}
+.card{
+    img{
+        max-width: 10rem;
+        height: auto;
+    }
+    h1{
+        font-size: small;
+    }
+    
+.recipe{
+    @include cont;
+     grid-template-columns: 1fr;
+     grid-template-areas:
+     "img "
+     "p"
+     "ingredients"
+     "filling"
+     "remaining-ingr"
+     "Directions"
+    ;
+    }
+    .recipe-eggplant{
+    @include cont;
+     grid-template-columns: 1fr;
+     grid-template-areas:
+     "img "
+     "p"
+     "ingredients"
+     "filling"
+     "remaining-ingr"
+     "Directions"
+    //  "img Directions Directions"
+    ;
+    
+    }
+    
+}
+}
+@media screen and (max-width: $Mbtw-width) and (min-width:$btw-width) {
+.card{
+    img{
+        max-width: 15rem;
+        height: auto;
+    }
+    h1{
+        font-size: small;
+    }
+    
+}
 }
